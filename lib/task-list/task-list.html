@@ -1,4 +1,1 @@
-<div *ngFor="let task of tasks" class="task">
-    <input type="checkbox" [checked]="task.done">
-    <div class="task__title">{{task.title}}</div>
-</div>
+<ngc-task *ngFor="let task of tasks" [task]="task"></ngc-task>
