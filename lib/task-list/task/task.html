@@ -1,2 +1,4 @@
-<input type="checkbox" [checked]="task.done">
-<div class="task__title">{{task.title}}</div>
+<div class="task__box">
+    <ngc-checkbox [(checked)]="task.done"></ngc-checkbox>
+    <div class="task__title">{{task.title}}</div>
+</div>
