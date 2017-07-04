@@ -1,7 +1,17 @@
 <div class="app">
     <div class="app__l-side">
+        <ngc-navigation [activeLink]="getSelectedProjectLink()"
+                        (activeLinkChange)="selectProjectByLink($event)">
+            <ngc-navigation-section title="Projekty"
+                                    [items]="projectNavigationItems">
+            </ngc-navigation-section>
+        </ngc-navigation>
     </div>
     <div class="app__l-main">
-        <ngc-project></ngc-project>
+        <ngc-project *ngIf="selectedProject"
+                     [title]="selectedProject.title"
+                     [description]="selectedProject.description"
+                     [tasks]="selectedProject.tasks"
+                     (projectUpdated)="updateSelectedProject($event)"></ngc-project>
     </div>
 </div>
