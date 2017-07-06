@@ -2,15 +2,4 @@
     <h2 class="project__title">{{title}}</h2>
     <p>{{description}}</p>
 </div>
-<ngc-tabs>
-    <ngc-tab name="Zadania">
-        <ngc-task-list [tasks]="tasks"
-                       (tasksUpdated)="updateTasks($event)"></ngc-task-list>
-    </ngc-tab>
-    <ngc-tab name="Komentarze">
-        <ngc-comments [comments]="comments"
-                      (commentsUpdated)="updateComments($event)"></ngc-comments>
-    </ngc-tab>
-    <ngc-tab name="Aktywność"></ngc-tab>
-</ngc-tabs>
-
+<ngc-tabs [items]="tabItems"></ngc-tabs>
